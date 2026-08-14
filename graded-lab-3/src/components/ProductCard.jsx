@@ -1,0 +1,26 @@
+function ProductCard({ product }) {
+  return (
+    <div className="product-card">
+      <div className="image-container">
+        <img
+          src={product.image}
+          alt={product.title}
+        />
+      </div>
+
+      <div className="product-info">
+        <h2>{product.title}</h2>
+
+        <p className="category">
+          {product.category}
+        </p>
+
+        <p className="price">
+          ${product.price.toFixed(2)}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default ProductCard;
